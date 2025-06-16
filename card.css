@@ -16,7 +16,7 @@ height: 100vh;
     gap: 20px; /*space b/w cards*/
     flex-wrap: wrap; /*cards go to next line on small screen*/
     justify-content: center;
-    padding-top: 330px;
+    padding-top: 300px;
     padding-bottom: 15px;
     
 }
