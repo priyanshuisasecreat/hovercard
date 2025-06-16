@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Team Card</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <div class="card-container">
+   
+        <div class="card">
+            <img src="https://i.pravatar.cc/150?img=56" alt="Profile" class="profile-img">
+            <h2>Adarsh</h2>
+            <p>I love Coding websites! 💻</p>
+            <button class="follow-btn" data-name="Adarsh"> 💌Follow Me</button>
+        </div>
+        
+        
+        
+        <div class="card">
+            <img src="https://i.pravatar.cc/150?img=4" alt="" class="profile-img">
+            <h2> Krishna Keshari</h2>
+            <p>Frontend Designer 🎨</p>
+            <button class="follow-btn" data-name="Aarush Kushwah"> 💌Follow Me</button>
+        </div>
+        
+        <div class="card">
+            <img src="https://i.pravatar.cc/150?img=47" alt="" class="profile-img">
+            <h2>Manjesh Kushwaha</h2>
+            <p>Backend Developer 🚀</p>
+            <button class="follow-btn" data-name="Anshi Kushwaha"> 💌Follow Me</button>
+    </div>
+    
+</div>
+
+</body>
+
+<script>
+  const buttons = document.querySelectorAll('.follow-btn');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const name = button.getAttribute('data-name');
+
+      if (button.classList.contains('following')) {
+        // If already following → unfollow
+        button.classList.remove('following');
+        button.innerText = '💌 Follow';
+        button.style.backgroundColor = '#f76c6c';
+        showToast(`❌ Unfollowed ${name}`);
+      } else {
+        // If not following → follow
+        button.classList.add('following');
+        button.innerText = '✅ Following';
+        button.style.backgroundColor = 'gray';
+        showToast(`🎉 You’re now following ${name}`);
+      }
+    });
+  });
+</script>
+
+ 
+
+</html>
