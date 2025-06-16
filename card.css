@@ -70,3 +70,10 @@ button:hover {
     transform: scale(1.1); /*zoom in */
     background-color: #d85b5b;
 }
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
